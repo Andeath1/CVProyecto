@@ -1,0 +1,110 @@
+* {
+    background-color: var(--color-base);
+    color: var(--color-claro);
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+header {
+    overflow: auto;
+}
+footer {
+    display: flex;
+    overflow: auto;
+    color: var(--color-oscuro);
+    background: var(--color-claro);
+}
+
+img {
+    border-radius: 100%;
+    width: auto;
+    padding: 16px;
+    vertical-align: middle;
+}
+
+.tema_claro {
+    --color-oscuro: #2f2f3a;
+    --color-claro: #78a1bb;
+    --color-base: #eff9f2;
+}
+.tema_oscuro {
+    --color-oscuro: #acacb4;
+    --color-claro: #1c3b4e;
+    --color-base: #070316;
+}
+
+.azul {
+    background-color:var(--color-oscuro);
+    color: var(--color-claro);
+}
+.celeste {
+    background-color: var(--color-claro);
+    color: var(--color-base);
+}
+.blanco {
+    background-color: var(--color-base);
+    color:var(--color-claro);
+}
+
+#titulo_cv {
+    text-align: left;
+    font-style: italic;
+    margin: 1em 0 0 1em;
+}
+#foto {
+    max-height: 100px;
+}
+#foto_nombre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nombre {
+    padding-left: 40px;
+}
+
+#informacion_personal {
+    display: flex;
+}
+#barra_datos {
+    overflow: auto;
+    width: 20%;
+    height: 100vh;
+}
+#bloque_info {
+    overflow: auto;
+    width: 80%;
+    height: 100vh;
+}
+
+.titulo_bloque {
+    display: flex;
+    border-top: solid 3px var(--color-claro);
+    border-bottom: solid 3px var(--color-claro);
+}
+h2 {
+    margin: 0;
+    padding: 13px;
+}
+
+#mas_menos {
+    max-height: 20px;
+}
+
+.boton_tema{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+}
+
+#switch {
+    margin: 0;
+    padding: 0;
+    border-radius: 100%;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es" class="tema_claro">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Vitae</title>
+    <!-- Icono de la página web -->
+    <link rel="icon" type="image/x-icon" href="css/foto_persona.png">
+    <!-- Open graph data -->
+    <meta property="og:title" content="Currículum Vitae" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="/css/foto_persona.png" />
+    <!-- Aplicar estilo css -->
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+    <header class="azul">
+        <!-- api con la hora? -->
+        <p id="titulo_cv" class="azul">Currículum Vitae</p>
+        <div id="foto_nombre" class="azul">
+            <img id="foto" src="css/foto_persona.png" alt="Foto de Apellido y Nombre" class="azul">
+            <h1 id="nombre" class="azul">Apellido y Nombre</h1>
+        </div>
+    </header>
+    <div id="informacion_personal">
+        <section id="barra_datos" class="celeste">
+            <h3 class="celeste">DNI</h3>
+            <p class="celeste">11111111</p>
+            <h3 class="celeste">Mail</h3>
+            <p class="celeste">algo@algo.algo</p>
+        </section>
+        <section id="bloque_info">
+            <!-- Bloques de información -->
+            <div>
+                <div class="blanco titulo_bloque">
+                    <img id="mas_menos" src="css/menos.png" alt="Contraer">
+                    <h2>Título del bloque</h2>
+                </div>
+                <h3>Subtítulo 1</h3>
+                <p>Info</p>
+                <h3>Subtítulo 2</h3>
+                <p>Info</p>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="boton_tema">
+            <button id="switch" onclick="cambiar_tema()">
+                <img class="celeste" id="logo_tema" src="css/tema_claro.png" alt="Cambiar tema" style="height: 20px; width: auto;">
+            </button>
+        </div>
+        <!-- sacar style -->
+        <p style="margin: 0%;" class="celeste">Usar plantilla</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
