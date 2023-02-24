@@ -30,28 +30,46 @@
             <h3 class="celeste">Mail</h3>
             <p class="celeste">algo@algo.algo</p>
         </section>
-        <section id="bloque_info">
-            <!-- Bloques de información -->
-            <div>
+        <section id="barra_info">
+            <div class="bloque_info" id="bloque_info1">
                 <div class="blanco titulo_bloque">
-                    <img id="mas_menos" src="css/menos.png" alt="Contraer">
-                    <h2>Título del bloque</h2>
+                    <button class="celeste" id="mostrar_ocultar1">
+                        <img id="mas_menos1" src="css/menos.png" alt="Mostrar/Ocultar">
+                    </button>
+                    <h2>Título del bloque 1</h2>
                 </div>
-                <h3>Subtítulo 1</h3>
-                <p>Info</p>
-                <h3>Subtítulo 2</h3>
-                <p>Info</p>
+                <div class="blanco" id="info1">
+                    <h3>Subtítulo 1</h3>
+                    <p>Info</p>
+                    <h3>Subtítulo 2</h3>
+                    <p>Info</p>
+                </div>
+            </div>
+            <div class="bloque_info" id="bloque_info2">
+                <div class="blanco titulo_bloque">
+                    <button class="celeste" id="mostrar_ocultar2">
+                        <img id="mas_menos2" src="css/menos.png" alt="Mostrar/Ocultar">
+                    </button>
+                    <h2>Título del bloque 2</h2>
+                </div>
+                <div class="blanco" id="info2">
+                    <h3>Subtítulo 1</h3>
+                    <p>Info</p>
+                    <h3>Subtítulo 2</h3>
+                    <p>Info</p>
+                </div>
             </div>
         </section>
     </div>
     <footer>
-        <div class="boton_tema">
-            <button id="switch" onclick="cambiar_tema()">
-                <img class="celeste" id="logo_tema" src="css/tema_claro.png" alt="Cambiar tema" style="height: 20px; width: auto;">
+        <div id="botones">
+            <button id="plantilla" class="celeste">
+                Usar plantilla
+            </button>
+            <button id="switch" class="celeste">
+                <img class="celeste" id="logo_tema" alt="Cambiar tema">
             </button>
         </div>
-        <!-- sacar style -->
-        <p style="margin: 0%;" class="celeste">Usar plantilla</p>
     </footer>
     <script src="scripts.js"></script>
 </body>

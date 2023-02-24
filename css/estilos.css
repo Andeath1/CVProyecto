@@ -21,7 +21,6 @@ footer {
 img {
     border-radius: 100%;
     width: auto;
-    padding: 16px;
     vertical-align: middle;
 }
 
@@ -56,6 +55,7 @@ img {
 }
 #foto {
     max-height: 100px;
+    padding: 16px;
 }
 #foto_nombre {
     display: flex;
@@ -75,36 +75,50 @@ img {
     width: 20%;
     height: 100vh;
 }
-#bloque_info {
+#barra_info {
     overflow: auto;
     width: 80%;
     height: 100vh;
 }
 
+.bloque_info {
+    border: solid 3px var(--color-claro);
+    border-left: 0px;
+}
+.oculto {
+    display: none;
+}
 .titulo_bloque {
     display: flex;
-    border-top: solid 3px var(--color-claro);
     border-bottom: solid 3px var(--color-claro);
 }
 h2 {
     margin: 0;
-    padding: 13px;
+    padding: 2px;
 }
-
 #mas_menos {
-    max-height: 20px;
+    max-height: 16px;
+    padding: 0px;
 }
 
-.boton_tema{
+#botones{
+    margin-left: auto;
+    display: flex;
+}
+button {
+    border: 0;
+    padding: 8px;
+}
+#plantilla {
+    text-decoration: underline;
+    color: var(--color-oscuro);
+}
+#switch {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30px;
-    width: 30px;
 }
-
-#switch {
-    margin: 0;
-    padding: 0;
-    border-radius: 100%;
+#logo_tema {
+    height: 16px;
+    width: auto;
 }
