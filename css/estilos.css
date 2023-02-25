@@ -23,6 +23,12 @@ img {
     width: auto;
     vertical-align: middle;
 }
+.icono {
+    max-height: 16px;
+    padding: 0px;
+    color: var(--color-base);
+    background-color: var(--color-claro);
+}
 
 .tema_claro {
     --color-oscuro: #2f2f3a;
@@ -46,6 +52,10 @@ img {
 .blanco {
     background-color: var(--color-base);
     color:var(--color-claro);
+}
+.iconos {
+    background-color: var(--color-claro);
+    color: var(--color-oscuro);
 }
 
 #titulo_cv {
@@ -85,9 +95,6 @@ img {
     border: solid 3px var(--color-claro);
     border-left: 0px;
 }
-.oculto {
-    display: none;
-}
 .titulo_bloque {
     display: flex;
     border-bottom: solid 3px var(--color-claro);
@@ -96,9 +103,8 @@ h2 {
     margin: 0;
     padding: 2px;
 }
-#mas_menos {
-    max-height: 16px;
-    padding: 0px;
+.oculto {
+    display: none;
 }
 
 #botones{
@@ -117,8 +123,4 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-#logo_tema {
-    height: 16px;
-    width: auto;
 }

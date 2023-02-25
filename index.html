@@ -11,8 +11,9 @@
     <meta property="og:title" content="Currículum Vitae" />
     <meta property="og:type" content="article" />
     <meta property="og:image" content="/css/foto_persona.png" />
-    <!-- Aplicar estilo css -->
+    <!-- Aplica estilos y agrega iconos-->
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="css/iconos.css">
 </head>
 <body>
     <header class="azul">
@@ -31,10 +32,11 @@
             <p class="celeste">algo@algo.algo</p>
         </section>
         <section id="barra_info">
+            <!-- Bloque 1-->
             <div class="bloque_info" id="bloque_info1">
                 <div class="blanco titulo_bloque">
                     <button class="celeste" id="mostrar_ocultar1">
-                        <img id="mas_menos1" src="css/menos.png" alt="Mostrar/Ocultar">
+                        <span class="iconos icon-menos" id="mas_menos1"></span>
                     </button>
                     <h2>Título del bloque 1</h2>
                 </div>
@@ -45,12 +47,13 @@
                     <p>Info</p>
                 </div>
             </div>
+            <!-- Bloque 2-->
             <div class="bloque_info" id="bloque_info2">
                 <div class="blanco titulo_bloque">
                     <button class="celeste" id="mostrar_ocultar2">
-                        <img id="mas_menos2" src="css/menos.png" alt="Mostrar/Ocultar">
+                        <span class="iconos icon-menos" id="mas_menos2"></span>
                     </button>
-                    <h2>Título del bloque 2</h2>
+                    <h2>Título del bloque 1</h2>
                 </div>
                 <div class="blanco" id="info2">
                     <h3>Subtítulo 1</h3>
@@ -67,7 +70,7 @@
                 Usar plantilla
             </button>
             <button id="switch" class="celeste">
-                <img class="celeste" id="logo_tema" alt="Cambiar tema">
+                <span class="iconos icon-tema" id="icono_tema"></span>
             </button>
         </div>
     </footer>
