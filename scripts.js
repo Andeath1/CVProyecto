@@ -62,3 +62,9 @@ function aviso() {
 // despliega el aviso
 let boton_plantilla = document.getElementById("plantilla");
 boton_plantilla.addEventListener("click", aviso);
+
+
+// traductor de Google
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}

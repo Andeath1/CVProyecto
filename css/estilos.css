@@ -23,12 +23,6 @@ img {
     width: auto;
     vertical-align: middle;
 }
-.icono {
-    max-height: 16px;
-    padding: 0px;
-    color: var(--color-base);
-    background-color: var(--color-claro);
-}
 
 .tema_claro {
     --color-oscuro: #2f2f3a;
@@ -53,16 +47,30 @@ img {
     background-color: var(--color-base);
     color:var(--color-claro);
 }
+
 .iconos {
     background-color: var(--color-claro);
     color: var(--color-oscuro);
 }
 
+.flex {
+    display: flex;
+    margin-top: 16px;
+}
+
 #titulo_cv {
+    overflow: auto;
+    width: 20%;
     text-align: left;
     font-style: italic;
-    margin: 1em 0 0 1em;
+    margin: 0 0 0 16px;
 }
+#google_translate_element {
+    overflow: auto;
+    margin-left: auto;
+    margin-right: 16px;
+}
+
 #foto {
     max-height: 100px;
     padding: 16px;
@@ -77,9 +85,6 @@ img {
     padding-left: 40px;
 }
 
-#informacion_personal {
-    display: flex;
-}
 #barra_datos {
     overflow: auto;
     width: 20%;

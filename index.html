@@ -18,13 +18,16 @@
 <body>
     <header class="azul">
         <!-- api con la hora? -->
-        <p id="titulo_cv" class="azul">Currículum Vitae</p>
+        <div class="azul flex">
+            <p id="titulo_cv" class="azul">Currículum Vitae</p>
+            <div class="azul" id="google_translate_element"></div>
+        </div>
         <div id="foto_nombre" class="azul">
             <img id="foto" src="css/foto_persona.png" alt="Foto de Apellido y Nombre" class="azul">
             <h1 id="nombre" class="azul">Apellido y Nombre</h1>
         </div>
     </header>
-    <div id="informacion_personal">
+    <div class="flex">
         <section id="barra_datos" class="celeste">
             <h3 class="celeste">DNI</h3>
             <p class="celeste">11111111</p>
@@ -75,5 +78,6 @@
         </div>
     </footer>
     <script src="scripts.js"></script>
+    <script src="traductor.js"></script>
 </body>
 </html>
