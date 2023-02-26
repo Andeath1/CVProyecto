@@ -68,3 +68,25 @@ boton_plantilla.addEventListener("click", aviso);
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
 }
+
+// Insertar foto dentro del módulo
+var modulo = document.getElementById("modulo");
+var img = document.getElementById("foto");
+var foto_modulo = document.getElementById("foto_grande");
+img.onclick = function(){
+  modulo.style.display = "block";
+  foto_modulo.src = this.src;
+}
+
+// Botón para cerrar y cerrado por click afuera de la foto
+var x = document.getElementsByClassName("cerrar")[0];
+
+x.onclick = function() {
+    modulo.style.display = "none";
+}
+
+window.onclick = function(evento) {
+    if (evento.target == modulo) {
+      modulo.style.display = "none";
+    }
+}

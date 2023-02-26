@@ -1,8 +1,3 @@
-* {
-    background-color: var(--color-base);
-    color: var(--color-claro);
-}
-
 body {
     box-sizing: border-box;
     margin: 0px;
@@ -14,8 +9,6 @@ header {
 footer {
     display: flex;
     overflow: auto;
-    color: var(--color-oscuro);
-    background: var(--color-claro);
 }
 
 img {
@@ -53,11 +46,10 @@ img {
     color: var(--color-oscuro);
 }
 
-.flex {
+#barra_superior {
     display: flex;
     margin-top: 16px;
 }
-
 #titulo_cv {
     overflow: auto;
     width: 20%;
@@ -72,19 +64,76 @@ img {
 }
 
 #foto {
-    max-height: 100px;
+    height: 100px;
+    width: auto;
     padding: 16px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 0.3s;
 }
+#foto:hover {
+    opacity: 0.7;
+    scale: 1.1;
+}
+/* Fondo del módulo */
+.modulo {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 2%; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.9); 
+}
+/* Contenido del módulo */
+.contenido_modulo {
+    margin: auto;
+    display: block;
+    max-height: 100vh;
+    width: auto;
+}
+/* Zoom */
+.contenido_modulo {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+/* Botón para cerrar */
+.cerrar {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.cerrar:hover,
+.cerrar:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 #foto_nombre {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden ;
 }
-
 #nombre {
     padding-left: 40px;
 }
 
+#datos {
+    display: flex;
+}
 #barra_datos {
     overflow: auto;
     width: 20%;
@@ -94,6 +143,7 @@ img {
     overflow: auto;
     width: 80%;
     height: 100vh;
+    background-color: var(--color-base);
 }
 
 .bloque_info {
@@ -122,7 +172,6 @@ button {
 }
 #plantilla {
     text-decoration: underline;
-    color: var(--color-oscuro);
 }
 #switch {
     display: flex;
