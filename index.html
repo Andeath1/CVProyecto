@@ -14,6 +14,10 @@
     <!-- Aplica estilos y agrega iconos-->
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link rel="stylesheet" type="text/css" href="css/iconos.css">
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="azul">
@@ -30,12 +34,12 @@
             <h1 id="nombre" class="azul">Apellido y Nombre</h1>
         </div>
     </header>
-    <div id="datos">
-        <section id="barra_datos" class="celeste">
-            <h3 class="celeste">DNI</h3>
-            <p class="celeste">11111111</p>
-            <h3 class="celeste">Mail</h3>
-            <p class="celeste">algo@algo.algo</p>
+    <div class="blanco" id="datos">
+        <section class="celeste" id="barra_datos" >
+            <h3 >DNI</h3>
+            <p >11111111</p>
+            <h3 >Mail</h3>
+            <p >algo@algo.algo</p>
         </section>
         <section id="barra_info">
             <!-- Bloque 1-->
@@ -59,9 +63,39 @@
                     <button class="celeste" id="mostrar_ocultar2">
                         <span class="iconos icon-menos" id="mas_menos2"></span>
                     </button>
-                    <h2>Título del bloque 1</h2>
+                    <h2>Título del bloque 2</h2>
                 </div>
                 <div class="blanco" id="info2">
+                    <h3>Subtítulo 1</h3>
+                    <p>Info</p>
+                    <h3>Subtítulo 2</h3>
+                    <p>Info</p>
+                </div>
+            </div>
+            <!-- Bloque 3-->
+            <div class="bloque_info" id="bloque_info3">
+                <div class="blanco titulo_bloque">
+                    <button class="celeste" id="mostrar_ocultar3">
+                        <span class="iconos icon-menos" id="mas_menos3"></span>
+                    </button>
+                    <h2>Título del bloque 3</h2>
+                </div>
+                <div class="blanco" id="info3">
+                    <h3>Subtítulo 1</h3>
+                    <p>Info</p>
+                    <h3>Subtítulo 2</h3>
+                    <p>Info</p>
+                </div>
+            </div>
+            <!-- Bloque 4-->
+            <div class="bloque_info" id="bloque_info4">
+                <div class="blanco titulo_bloque">
+                    <button class="celeste" id="mostrar_ocultar4">
+                        <span class="iconos icon-menos" id="mas_menos4"></span>
+                    </button>
+                    <h2>Título del bloque 4</h2>
+                </div>
+                <div class="blanco" id="info4">
                     <h3>Subtítulo 1</h3>
                     <p>Info</p>
                     <h3>Subtítulo 2</h3>
@@ -74,8 +108,10 @@
         <div id="botones">
             <button id="plantilla" class="azul">
                 Usar plantilla
+                <span class="icon-github" id="icono_github"></span>
             </button>
             <button id="switch" class="azul">
+                Cambiar tema
                 <span class="icon-tema" id="icono_tema"></span>
             </button>
         </div>

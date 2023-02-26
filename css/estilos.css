@@ -1,3 +1,24 @@
+* {
+    font-family: 'EB Garamond', sans-serif;
+}
+
+h1 {
+    text-shadow: 1px 1px 2px var(--color-claro);
+}
+h2 {
+    margin: 0;
+    padding: 2px
+}
+h3 {
+    margin: 0;
+    padding: 10px;
+}
+p {
+    font-style: italic;
+    font-weight: 500;
+    margin: 0 0 16px 0;
+}
+
 body {
     box-sizing: border-box;
     margin: 0px;
@@ -52,9 +73,8 @@ img {
 }
 #titulo_cv {
     overflow: auto;
-    width: 20%;
     text-align: left;
-    font-style: italic;
+    font-weight: 400;
     margin: 0 0 0 16px;
 }
 #google_translate_element {
@@ -138,12 +158,17 @@ img {
     overflow: auto;
     width: 20%;
     height: 100vh;
+    text-align: center;
+    padding-top: 20px;
 }
 #barra_info {
     overflow: auto;
     width: 80%;
     height: 100vh;
     background-color: var(--color-base);
+}
+#info1, #info2, #info3, #info4 {
+    padding-left: 20px;
 }
 
 .bloque_info {
@@ -154,10 +179,7 @@ img {
     display: flex;
     border-bottom: solid 3px var(--color-claro);
 }
-h2 {
-    margin: 0;
-    padding: 2px;
-}
+
 .oculto {
     display: none;
 }
@@ -170,10 +192,12 @@ button {
     border: 0;
     padding: 8px;
 }
-#plantilla {
-    text-decoration: underline;
+
+#icono_github, #icono_tema {
+    margin-left: 5px;
 }
-#switch {
+#switch,  #plantilla{
+    font-style: italic;
     display: flex;
     justify-content: center;
     align-items: center;
