@@ -1,13 +1,12 @@
 * {
     font-family: 'EB Garamond', sans-serif;
+    --alto-header: 173px;
 }
 
-h1 {
-    text-shadow: 1px 1px 2px var(--color-claro);
-}
 h2 {
+    color: var(--color-oscuro);
     margin: 0;
-    padding: 2px
+    padding: 2px 2px 2px 4px;
 }
 h3 {
     margin: 0;
@@ -16,27 +15,47 @@ h3 {
 p {
     font-style: italic;
     font-weight: 500;
-    margin: 0 0 16px 0;
+    padding: 0 0 16px 0;
+    margin: 0;
+}
+
+a, a:visited {
+    font-style: italic;
+    margin: 0;
+    color: var(--color-oscuro);
+}
+a:visited, a:hover {
+    text-decoration: none;
 }
 
 body {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    background: linear-gradient(to right, var(--color-claro) 52%, var(--color-oscuro) 76%);
 }
 header {
     overflow: auto;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    -webkit-box-shadow: 5px 5px 15px 5px var(--color-oscuro); 
+    box-shadow: 5px 5px 15px 5px var(--color-oscuro);
+    margin: 0 0 10px 0; 
 }
 footer {
     display: flex;
     overflow: auto;
+    background: linear-gradient(to right, var(--color-claro) 20%, var(--color-oscuro) 50%);
 }
 
 img {
     border-radius: 100%;
     width: auto;
     vertical-align: middle;
+    cursor: pointer;
 }
+
 
 .tema_claro {
     --color-oscuro: #2f2f3a;
@@ -44,9 +63,9 @@ img {
     --color-base: #eff9f2;
 }
 .tema_oscuro {
-    --color-oscuro: #acacb4;
-    --color-claro: #1c3b4e;
-    --color-base: #070316;
+    --color-oscuro: #030e14;
+    --color-claro: #628397;
+    --color-base: #2f2f3a;
 }
 
 .azul {
@@ -67,9 +86,10 @@ img {
     color: var(--color-oscuro);
 }
 
+/* --- Header --- */
 #barra_superior {
     display: flex;
-    margin-top: 16px;
+    margin-top: 8px;
 }
 #titulo_cv {
     overflow: auto;
@@ -100,20 +120,20 @@ img {
     display: none; 
     position: fixed; 
     z-index: 1;
-    padding-top: 2%; 
+    padding-top: 5%; 
     left: 0;
     top: 0;
     width: 100%;
     height: 100%; 
-    overflow: auto; 
     background-color: rgba(0,0,0,0.9); 
 }
 /* Contenido del módulo */
 .contenido_modulo {
     margin: auto;
     display: block;
-    max-height: 100vh;
-    width: auto;
+    max-width: calc(100% - 10px);
+    height: auto;
+    border-radius: 20%;
 }
 /* Zoom */
 .contenido_modulo {
@@ -127,8 +147,8 @@ img {
 /* Botón para cerrar */
 .cerrar {
     position: absolute;
-    top: 15px;
-    right: 35px;
+    top: 10px;
+    right: 25px;
     color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
@@ -151,48 +171,61 @@ img {
     padding-left: 40px;
 }
 
+/* --- Secciones de datos --- */
 #datos {
     display: flex;
+    min-height: 100vh;
+    max-height: auto;
 }
 #barra_datos {
     overflow: auto;
     width: 20%;
-    height: 100vh;
     text-align: center;
-    padding-top: 20px;
+    margin-top: 20px;
+    color: var(--color-oscuro);
+    position: fixed;
+    z-index: 0;
 }
 #barra_info {
+    margin-left: 20%;
     overflow: auto;
     width: 80%;
-    height: 100vh;
-    background-color: var(--color-base);
 }
-#info1, #info2, #info3, #info4 {
+.info {
     padding-left: 20px;
 }
 
-.bloque_info {
-    border: solid 3px var(--color-claro);
-    border-left: 0px;
-}
 .titulo_bloque {
     display: flex;
-    border-bottom: solid 3px var(--color-claro);
+    background: linear-gradient(to right, var(--color-claro) 40%, var(--color-oscuro) 70%);
 }
 
 .oculto {
     display: none;
 }
 
+/* --- Footer --- */
 #botones{
     margin-left: auto;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 button {
     border: 0;
     padding: 8px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+button:hover {
+    opacity: 0.7;
 }
 
+#link_plantilla {
+    font-size: 13px;
+    color: var(--color-claro);
+}
 #icono_github, #icono_tema {
     margin-left: 5px;
 }
@@ -201,4 +234,5 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 0%;
 }

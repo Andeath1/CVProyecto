@@ -30,11 +30,11 @@ function mostrar_ocultar4 (){
 }
 // función absoluta para colapsar elementos
 function mostrar_ocultar_abs(numero_info, mas_menos){
-    if (numero_info.className === "blanco"){
-        numero_info.className = "blanco oculto";
+    if (numero_info.className === "blanco info"){
+        numero_info.className = "blanco info oculto";
         mas_menos.className = "iconos icon-mas";
     } else {
-        numero_info.className = "blanco";
+        numero_info.className = "blanco info";
         mas_menos.className = "iconos icon-menos";
     }
 }
@@ -67,7 +67,7 @@ function cambiar_tema() {
 // redirección a GitHub
 function redirección() {
     if (confirm("¿Desea ver el repositorio en GitHub?")){
-        window.open("https://github.com/Andeath1/CVProyecto", "Gracias, ahora se le redirigirá.")
+        window.open("https://github.com/Andeath1/CVProyecto", "Gracias, ahora se le redirigirá.");
     }
 }
 // despliega el aviso
@@ -77,14 +77,14 @@ boton_plantilla.addEventListener("click", redirección);
 
 // traductor de Google
 function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element')
 }
 
 // Insertar foto dentro del módulo
 let modulo = document.getElementById("modulo");
 let foto = document.getElementById("foto");
 let foto_modulo = document.getElementById("foto_grande");
-foto.addEventListener("click", foto_grande)
+foto.addEventListener("click", foto_grande);
 
 function foto_grande() {
   modulo.style.display = "block";
@@ -92,11 +92,11 @@ function foto_grande() {
 }
 // Botón para cerrar y cerrado por click afuera de la foto
 let x = document.getElementsByClassName("cerrar")[0];
-x.addEventListener("click", cerrar)
+x.addEventListener("click", cerrar);
 function cerrar() {
     modulo.style.display = "none";
 }
-window.addEventListener("click", cerrar2)
+window.addEventListener("click", cerrar2);
 function cerrar2 (evento) {
     if (evento.target == modulo) {
       modulo.style.display = "none";
