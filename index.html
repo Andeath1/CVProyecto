@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="tema_claro">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,7 @@
     <!-- Open graph data -->
     <meta property="og:title" content="Currículum Vitae" />
     <meta property="og:type" content="article" />
-    <meta property="og:image" content="/css/foto_persona.png" />
+    <meta property="og:image" content="css/foto_persona.png" />
     <!-- Aplica estilos y agrega iconos-->
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link rel="stylesheet" type="text/css" href="css/iconos.css">
@@ -21,120 +21,143 @@
 </head>
 <body>
 
-    <header class="azul">
-        <div class="azul" id="barra_superior">
-            <p id="titulo_cv" class="azul">Currículum Vitae</p>
-            <div class="azul" id="google_translate_element"></div>
+    <header class="oscuro">
+        <div id="barra_superior">
+            <p id="curriculum_vitae">Currículum Vitae</p>
+            <div id="google_traductor"></div>
         </div>
-        <div id="foto_nombre" class="azul">
-            <img id="foto" src="css/foto_persona.png" alt="Foto de Apellido y Nombre">
-                <div id="modulo" class="modulo">
+        <div id="bloque_foto_nombre" class="bloque_img_text">
+            <div id="bloque_foto_header">
+                <img id="foto_header" class="foto" src="css/foto_persona.png" alt="Foto de Apellido y Nombre">
+                <div id="modal_header" class="modal">
                     <span class="cerrar">&times;</span>
-                    <img class="contenido_modulo" id="foto_grande">
+                    <img id="foto_grande_header" class="contenido_modal">
                 </div>
-            <h1 id="nombre" class="azul">Apellido y Nombre</h1>
+            </div>
+            <h1 id="nombre">Apellido y Nombre</h1>
         </div>
     </header>
 
-    <div id="datos">
+    <div class="fila">
 
-        <section class="celeste" id="barra_datos" >
-            <h3>Edad</h3>
-            <p>11</p>
-            <h3>DNI</h3>
-            <p>11.111.111</p>
-            <h3>Lugar de residencia</h3>
-            <p>Ciudad, calle 1234</p>
-            <h3>Contacto</h3>
-            <p>Teléfono: </p>
-            <p><a href="mailto:algo@algo.algo" target="_blank" rel="noopener noreferrer">e-mail</a></p>
-            <p><a href="https://ar.linkedin.com" target="_blank" rel="noopener noreferrer">LindedIn</a></p>
+        <!-- DATOS PERSONALES -->
+        <section id="datos_personales" class="col-4">
+            <div id="bloque_menu" class="bloque_img_text">
+                <button id="boton_menu" class="boton_cuadrado">
+                    <span id="icono_menu" class="icon-menu"></span>
+                    <h2 id="texto_menu">Datos personales</h2>
+                </button>
+            </div>
+            <div id="datos_ocultables">
+                <div id="bloque_foto_datos">
+                    <img id="foto_datos" class="foto" src="css/foto_persona.png" alt="Foto de Apellido y Nombre">
+                    <div id="modal_datos" class="modal">
+                        <img id="foto_grande_datos" class="contenido_modal">
+                    </div> 
+                </div>
+                <div id="lista_datos">
+                    <h2 id="titulo_datos">Datos personales</h2>
+                    <h3>Edad</h3>
+                    <p>11</p>
+                    <h3>DNI</h3>
+                    <p>11.111.111</p>
+                    <h3>Fecha de nacimiento</h3>
+                    <p>11/11/1111</p>
+                    <h3>Estado Civil</h3>
+                    <p>Alguno</p>
+                    <h3>Lugar de residencia</h3>
+                    <p>Ciudad, calle 1234</p>
+                    <h3>Contacto</h3>
+                    <p>Teléfono: 111 1 111111</p>
+                    <p><a href="mailto:algo@algo.algo" target="_blank" rel="noopener noreferrer">e-mail</a></p>
+                    <p><a href="https://ar.linkedin.com" target="_blank" rel="noopener noreferrer">LindedIn</a></p>
+                </div>
+            </div>
         </section>
 
-        <section id="barra_info">
-            
-            <!-- Bloque 1-->
-            <div class="bloque_info" id="bloque_info1">
-                <div class="blanco titulo_bloque">
-                    <button class="celeste" id="mostrar_ocultar1">
-                        <span class="iconos icon-menos" id="mas_menos1"></span>
+        <!-- INFORMACION PERSONAL -->
+        <section id="informacion_personal" class="col-8">
+                
+            <!-- Bloque 1 -->
+            <div class="bloque_info">
+                <div id="titulo_bloque_1" class="bloque_img_text titulo_bloque_info">
+                    <button id="boton_info_1">
+                        <span id="icono_info_1" class="icon-menos"></span>
                     </button>
                     <h2>Formación académica</h2>
                 </div>
-                <div class="blanco info" id="info1">
-                    <h3>Subtítulo 1</h3>
-                    <p>Info</p>
-                    <h3>Subtítulo 2</h3>
-                    <p>Info</p>
+                <div id="subtitulos_info_1" class="base subtitulos">
+                    <h3>Estudio de grado</h3>
+                    <p>(Fecha) Institución</p>
+                    <h3>Estudio de pregrado</h3>
+                    <p>(Fecha) Institución</p>
                 </div>
             </div>
 
-            <!-- Bloque 2-->
-            <div class="bloque_info" id="bloque_info2">
-                <div class="blanco titulo_bloque">
-                    <button class="celeste" id="mostrar_ocultar2">
-                        <span class="iconos icon-menos" id="mas_menos2"></span>
+            <!-- Bloque 2 -->
+            <div class="bloque_info">
+                <div id="titulo_bloque_2" class="bloque_img_text titulo_bloque_info">
+                    <button id="boton_info_2">
+                        <span id="icono_info_2" class="icon-menos"></span>
                     </button>
-                    <h2>Formación complementaria</h2>
+                    <h2>Formación adicional</h2>
                 </div>
-                <div class="blanco info" id="info2">
-                    <h3>Subtítulo 1</h3>
-                    <p>Info</p>
-                    <h3>Subtítulo 2</h3>
-                    <p>Info</p>
+                <div id="subtitulos_info_2" class="base subtitulos">
+                    <h3>Certificación obtenida</h3>
+                    <p>(Fecha) Institución</p>
+                    <h3>Certificación obtenida</h3>
+                    <p>(Fecha) Institución</p>
+                    <h3>Certificación obtenida</h3>
+                    <p>(Fecha) Institución</p>
                 </div>
             </div>
 
-            <!-- Bloque 3-->
-            <div class="bloque_info" id="bloque_info3">
-                <div class="blanco titulo_bloque">
-                    <button class="celeste" id="mostrar_ocultar3">
-                        <span class="iconos icon-menos" id="mas_menos3"></span>
+            <!-- Bloque 3 -->
+            <div class="bloque_info">
+                <div id="titulo_bloque_3" class="bloque_img_text titulo_bloque_info">
+                    <button id="boton_info_3">
+                        <span id="icono_info_3" class="icon-menos"></span>
                     </button>
-                    <h2>Experiencia laboral</h2>
+                    <h2>Experiencia Laboral</h2>
                 </div>
-                <div class="blanco info" id="info3">
-                    <h3>Subtítulo 1</h3>
-                    <p>Info</p>
-                    <h3>Subtítulo 2</h3>
-                    <p>Info</p>
+                <div id="subtitulos_info_3" class="base subtitulos">
+                    <h3>Puesto de trabajo</h3>
+                    <p>(Fecha) Empresa</p>
+                    <h3>Puesto de trabajo</h3>
+                    <p>(Fecha) Empresa</p>
                 </div>
             </div>
-
-            <!-- Bloque 4-->
-            <div class="bloque_info" id="bloque_info4">
-                <div class="blanco titulo_bloque">
-                    <button class="celeste" id="mostrar_ocultar4">
-                        <span class="iconos icon-menos" id="mas_menos4"></span>
+            
+            <!-- Bloque 4 -->
+            <div class="bloque_info">
+                <div id="titulo_bloque_4" class="bloque_img_text titulo_bloque_info">
+                    <button id="boton_info_4">
+                        <span id="icono_info_4" class="icon-menos"></span>
                     </button>
-                    <h2>Complementos</h2>
+                    <h2>Información complementaria</h2>
                 </div>
-                <div class="blanco info" id="info4">
-                    <h3>Subtítulo 1</h3>
-                    <p>Info</p>
-                    <h3>Subtítulo 2</h3>
-                    <p>Info</p>
+                <div id="subtitulos_info_4" class="base subtitulos">
+                    <h3>Datos importantes</h3>
+                    <p>Información</p>
                 </div>
             </div>
 
         </section>
     </div>
 
-    <footer class="azul">
-        <div id="botones">
-            <a href="https://github.com/Andeath1/CVProyecto" id="link_plantilla" target="_blank" rel="noopener noreferrer">Usar Plantilla</a>
-            <button id="plantilla" class="azul">
-                <span class="icon-github" id="icono_github"></span>
+    <footer>
+        <div id="links_footer" class="bloque_img_text">
+            <p><a id="link_plantilla" href="https://github.com/Andeath1/CVProyecto" target="_blank" rel="noopener noreferrer">Usar Plantilla</a></p>
+            <button id="boton_github">
+                <span class="icon-github"></span>
             </button>
-            <button id="switch" class="azul">
-                Cambiar tema
-                <span class="icon-tema" id="icono_tema"></span>
+            <button id="boton_tema">
+                <span class="icon-tema" ></span>
             </button>
         </div>
     </footer>
 
     <script src="scripts.js"></script>
     <script src="traductor.js"></script>
-
 </body>
 </html>

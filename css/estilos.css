@@ -1,62 +1,10 @@
+/* ---------- ESTILOS GENERALES ---------- */
 * {
-    font-family: 'EB Garamond', sans-serif;
-    --alto-header: 173px;
-}
-
-h2 {
-    color: var(--color-oscuro);
-    margin: 0;
-    padding: 2px 2px 2px 4px;
-}
-h3 {
-    margin: 0;
-    padding: 10px;
-}
-p {
-    font-style: italic;
-    font-weight: 500;
-    padding: 0 0 8px 0;
-    margin: 0;
-}
-a, a:visited {
-    font-style: italic;
-    margin: 0;
-    color: var(--color-oscuro);
-}
-a:visited, a:hover {
-    text-decoration: none;
-}
-
-body {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    background: linear-gradient(to right, var(--color-claro) 52%, var(--color-oscuro) 76%);
+    margin: 0;
+    padding: 0;
+    font-family: 'EB Garamond', sans-serif;
 }
-header {
-    overflow: auto;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    -webkit-box-shadow: 5px 5px 15px 5px var(--color-oscuro); 
-    box-shadow: 5px 5px 15px 5px var(--color-oscuro);
-    margin: 0 0 10px 0; 
-    z-index: 3;
-}
-footer {
-    display: flex;
-    overflow: auto;
-    background: linear-gradient(to right, var(--color-claro) 20%, var(--color-oscuro) 50%);
-}
-
-img {
-    border-radius: 100%;
-    width: auto;
-    vertical-align: middle;
-    cursor: pointer;
-}
-
-
 .tema_claro {
     --color-oscuro: #2f2f3a;
     --color-claro: #78a1bb;
@@ -67,56 +15,105 @@ img {
     --color-claro: #628397;
     --color-base: #2f2f3a;
 }
-
-.azul {
-    background-color:var(--color-oscuro);
-    color: var(--color-claro);
+body {
+    background: linear-gradient(to right, var(--color-claro) 33%, var(--color-oscuro) 75%);
 }
-.celeste {
-    background-color: var(--color-claro);
+header {
+    overflow: auto;
+    position: sticky;
+    top: 0;
+    -webkit-box-shadow: 5px 5px 15px 5px var(--color-oscuro); 
+    box-shadow: 5px 5px 15px 5px var(--color-oscuro);
+    margin: 0 0 10px 0;
+    border-radius: 0 0 0 10px;
+}
+.fila {
+    padding: 0 0 10px 0;
+}
+.fila::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+footer * {
+    display: flex;
     color: var(--color-base);
 }
-.blanco {
-    background-color: var(--color-base);
-    color:var(--color-claro);
-}
 
-.iconos {
-    background-color: var(--color-claro);
+/* ---------- ESTILOS INDIVIDUALES ---------- */
+/* Clases de colores y oculto */
+.oscuro {
+    background-color: var(--color-oscuro);
+    color: var(--color-claro);
+}
+.claro {
     color: var(--color-oscuro);
 }
-
-/* --- Header --- */
-#barra_superior {
+.base {
+    background-color: var(--color-base);
+    color: var(--color-claro);
+}
+.oculto {
+    display: none;
+}
+/* Fuentes, links y botones */
+p {
+    font-style: italic;
+    font-weight: 500;
+}
+a {
+    color: var(--color-base);
+    cursor: pointer;
+    transition: 0.4s;
+}
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover, button:hover {
+    opacity: 0.8;
+}
+button {
+    border: 0;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: inherit;
+    transition: 0.2s;
+}
+.boton_cuadrado {
+    font-style: italic;
     display: flex;
-    margin-top: 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
 }
-#titulo_cv {
-    overflow: auto;
-    text-align: left;
-    font-weight: 400;
-    margin: 0 0 0 16px;
+.boton_cuadrado:hover {
+    scale: 1.1;
+    box-shadow: 0 12px 16px 0 var(--color-oscuro);
 }
-#google_translate_element {
-    overflow: auto;
-    margin-left: auto;
-    margin-right: 16px;
+/* Bloques con imágenes y texto */
+.bloque_img_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
-
-#foto {
+/* Fotos */
+.foto {
+    border-radius: 100%;
+    padding: 16px;
     height: 100px;
     width: auto;
-    padding: 16px;
-    border-radius: 100%;
     cursor: pointer;
     transition: 0.3s;
 }
-#foto:hover {
+.foto:hover {
     opacity: 0.7;
-    scale: 1.1;
+    scale: 1.2;
 }
-/* Fondo del módulo */
-.modulo {
+/* Modal */
+.modal {
     display: none; 
     position: fixed;
     z-index: 1;
@@ -127,16 +124,14 @@ img {
     height: 100%; 
     background-color: rgba(0,0,0,0.9); 
 }
-/* Contenido del módulo */
-.contenido_modulo {
+.contenido_modal {
     margin: auto;
     display: block;
     max-width: calc(100% - 10px);
     height: auto;
     border-radius: 20%;
 }
-/* Zoom */
-.contenido_modulo {
+.contenido_modal {
     animation-name: zoom;
     animation-duration: 0.6s;
 }
@@ -144,7 +139,6 @@ img {
     from {transform:scale(0)}
     to {transform:scale(1)}
 }
-/* Botón para cerrar */
 .cerrar {
     position: absolute;
     top: 10px;
@@ -154,91 +148,129 @@ img {
     font-weight: bold;
     transition: 0.3s;
 }
-.cerrar:hover,
-.cerrar:focus {
+.cerrar:hover, .cerrar:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
 }
 
-#foto_nombre {
+/* ----- HEADER ----- */
+/* Barra superior */
+#barra_superior {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden ;
+    margin-top: 8px;
 }
+#curriculum_vitae {
+    text-align: left;
+    font-weight: 400;
+    margin: 0 0 0 16px;
+}
+#google_traductor {
+    margin: 0 16px 0 auto;
+}
+
+/* Bloque foto y nombre */
 #nombre {
-    padding-left: 40px;
+    padding: 0 0 10px 10px;
 }
 
-/* --- Secciones de datos --- */
-#datos {
-    display: flex;
-    max-height: auto;
+/* ----- SECCION DATOS PERSONALES ----- */
+#datos_personales {
+    background-color: var(--color-claro);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 12px 16px 0 var(--color-oscuro);
 }
-#barra_datos {
-    overflow: auto;
-    width: 20%;
+#datos_personales h2 {
+    text-decoration: underline;
+}
+#bloque_menu, #datos_ocultables {
+    overflow: visible;
     text-align: center;
-    color: var(--color-oscuro);
-    position: fixed;
 }
-#barra_datos > h3 {
-    padding-bottom: 8px;
+#texto_menu {
+    padding-left: 10px;
 }
-
-#barra_info {
-    padding-left: 20%;
-    overflow: auto;
-    width: 80%;
-    min-height: calc(100vh - var(--alto-header));
-}
-.info {
-    padding-left: 20px;
+#lista_datos > h3 {
+    padding-top: 8px;
 }
 
-.info > p {
-    padding: 0 0 16px 0;
+/* ----- INFORMACION PERSONAL ----- */
+#informacion_personal {
+    padding: 0 10px;
+}
+.bloque_info :is(h2, p) {
+    padding-left: 10px;
+}
+.bloque_info h3 {
+    padding: 10px 20px 10px 20px;
+}
+.titulo_bloque_info {
+    justify-content: initial;
+    align-items: initial;
+}
+.subtitulos {
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+/* ----- FOOTER ----- */
+#links_footer {
+    justify-content: end;
 }
 
-.titulo_bloque {
-    display: flex;
-    background: linear-gradient(to right, var(--color-claro) 40%, var(--color-oscuro) 70%);
+/* Alto de la pantalla mínima 100vh (solución a mejorar) */
+#informacion_personal {
+    min-height: calc(100vh - 210px);
 }
 
-.oculto {
+/* ----- COLUMNAS RESPONSIVAS ----- */
+/* Dispositivos chicos */
+[class*="col-"] {
+    width: 100%;
+    float: left;
+}
+#bloque_foto_header, #titulo_datos {
     display: none;
 }
 
-/* --- Footer --- */
-#botones{
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-button {
-    border: 0;
-    padding: 8px;
-    cursor: pointer;
-    border-radius: 100%;
-}
-button:hover {
-    opacity: 0.7;
-}
+/* Dispositivos grandes */
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
 
-#link_plantilla {
-    font-size: 13px;
-    color: var(--color-claro);
-}
-#icono_github, #icono_tema {
-    margin-left: 5px;
-}
-#switch,  #plantilla{
-    font-style: italic;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0%;
+    /* ----- HEADER ----- */
+    #bloque_foto_header {
+        display: inherit;
+    }
+    #nombre {
+        padding: 0 0 0 10px;
+    }
+    /* ----- DATOS PERSONALES ----- */
+    #datos_personales {
+        padding: 0;
+        margin: 0;
+    }
+    #datos_ocultables, #titulo_datos {
+        display: block;
+        padding: 10px;
+    }
+    #bloque_menu, #bloque_foto_datos {
+        display: none;
+    }
+
+    /* Alto de la pantalla mínima 100vh (solución a mejorar) */
+    #informacion_personal {
+        min-height: calc(100vh - 185px);
+    }
 }
