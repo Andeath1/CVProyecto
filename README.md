@@ -1,6 +1,8 @@
 ESP
 ¡Hola! Gracias por haber llegado hasta acá y por estar leyendo este archivo.
 Te invito a que explores todo el código y me des un feedback si tenés ganas, este es mi primer proyecto publicado así que aprecio toda sugerencia.
+Este proyecto lo realicé como proyecto final de la primera parte de las capacitaciones Argentina Programa.
+El resultado final es, esencialmente, este repositorio. Pero aún tengo planificado agregar 
 Pronto estaré subiendo algunos proyectos viejos y los actualizaré, así que también te invito a mirarlos si es que subí alguno.
 Aunque actualmente estoy trabajando en la función "Usar plantilla" de este mismo proyecto para que puedas personalizar la página para mostrar un currículum personalizado.
 Saludos, Andeath.
